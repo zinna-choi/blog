@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
-import { BrowserRouter , Route } from 'react-router-dom';
+import { BrowserRouter , Route , Link , Switch } from 'react-router-dom';
 //import Home from './inc/home.js';//
 //import Test from './inc/test.js';//
 import {Home,Test} from './inc'
@@ -25,7 +25,14 @@ class App extends Component {
       <div className ='App'>
         <BrowserRouter>
           <Route path="/" component = {Home} exact/>
-          <Route path="/test" component = {Test}/>
+          <Switch>
+            <Route path="/test/:data" component = {Test}/>
+            <Route path="/test" component = {Test}/>
+          </Switch>
+        <ul>
+          <li> <Link to='/'>Home</Link> </li>
+          <li> <Link to='/test'>Test</Link> </li>
+        </ul>
         </BrowserRouter>
       </div>
     )

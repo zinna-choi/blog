@@ -1,8 +1,8 @@
-import React, {component} from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
 
-class App extends component {
+class App extends Component {
   constructor(props) {
     super(props)
     this.state = {

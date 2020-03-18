@@ -7,7 +7,9 @@ class Head extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: false
+      visible: false,
+      id: "",
+      password: ""
     };
   }
 
@@ -21,7 +23,24 @@ class Head extends Component {
       visible: false
     });
   };
+
+  _ChangeID = function() {
+    const id_ = document.getElementsByName("id")[0].value;
+    this.setState({
+      id: id_
+    });
+  };
+
+  _ChangePW = function() {
+    const pw_ = document.getElementsByName("password")[0].value;
+    this.setState({
+      password: pw_
+    });
+  };
   render() {
+    console.log(
+      "아이디 :" + this.state.id + "비밀번호 :" + this.state.password
+    );
     return (
       <div class="header_grid">
         <div></div>
@@ -47,14 +66,22 @@ class Head extends Component {
                 <div className="login_div">
                   <div className="login_input_div">
                     <p> 관리자 ID </p>
-                    <input type="text" name="id" />
+                    <input
+                      type="text"
+                      name="id"
+                      onChange={() => this._ChangeID()}
+                    />
                   </div>
                   <div
                     className="login_input_div"
                     style={{ marginTop: "40px" }}
                   >
                     <p>관리자 password</p>
-                    <input type="password" name="password" />
+                    <input
+                      type="password"
+                      name="password"
+                      onChange={() => this._ChangePW()}
+                    />
                   </div>
                   <div className="submit_div">
                     <div>

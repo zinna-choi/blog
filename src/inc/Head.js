@@ -3,7 +3,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import "../App.css";
 import Modal from "react-awesome-modal";
 
-class header extends Component {
+class Head extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -56,4 +56,4 @@ class header extends Component {
   }
 }
 
-export default header;
+export default Head;

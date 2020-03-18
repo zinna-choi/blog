@@ -4,7 +4,7 @@ import axios from "axios";
 import { Route, Link, Switch } from "react-router-dom";
 //import Home from './inc/home.js';//
 //import Test from './inc/test.js';//
-import { Head } from "./inc";
+import Head from "./inc/Head";
 class App extends Component {
   constructor(props) {
     super(props);

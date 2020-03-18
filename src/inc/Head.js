@@ -37,17 +37,39 @@ class Head extends Component {
           <Modal
             visible={this.state.visible}
             width="400"
-            height="300"
+            height="350"
             effect="fadeInDown"
             onClickAway={() => this._closeModal()}
           >
             <div>
-              테스트
-              <input
-                value="닫기"
-                type="button"
-                onClick={() => this._closeModal()}
-              />
+              <h4 className="acenter login_tit">관리자로그인</h4>
+              <form>
+                <div className="login_div">
+                  <div className="login_input_div">
+                    <p> 관리자 ID </p>
+                    <input type="text" name="id" />
+                  </div>
+                  <div
+                    className="login_input_div"
+                    style={{ marginTop: "40px" }}
+                  >
+                    <p>관리자 password</p>
+                    <input type="password" name="password" />
+                  </div>
+                  <div className="submit_div">
+                    <div>
+                      <input type="button" value="로그인" />
+                    </div>
+                    <div>
+                      <input
+                        type="button"
+                        value="취소"
+                        onClick={() => this._closeModal()}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </Modal>
         </div>

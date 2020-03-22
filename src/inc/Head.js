@@ -42,7 +42,7 @@ class Head extends Component {
       "아이디 :" + this.state.id + "비밀번호 :" + this.state.password
     );
     return (
-      <div class="header_grid">
+      <div className="header_grid">
         <div></div>
         <div className="acenter">
           <Route path="/" />

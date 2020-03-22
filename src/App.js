@@ -4,7 +4,9 @@ import axios from "axios";
 import { Route, Link, Switch } from "react-router-dom";
 //import Home from './inc/home.js';//
 //import Test from './inc/test.js';//
-import Head from "./inc/Head";
+// import Head from "./inc/Head";
+import { Head } from "./inc";
+import UserList from "./components/user/UserList";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +26,7 @@ class App extends Component {
     return (
       <div>
         <Head />
+        <UserList />
       </div>
     );
   }

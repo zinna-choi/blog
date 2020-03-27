@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 import styled, { css } from "styled-components";
 
 const Box = styled.div`
@@ -44,8 +45,8 @@ const Button = styled.button`
 
 const home = () => (
   <Box color="black">
-    <Button>안녕하세요</Button>
-    <Button inverted={true}>테두리만</Button>
+    <Button>test</Button>
+    <Button inverted={true}>test</Button>
   </Box>
 );
 

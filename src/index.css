@@ -1,13 +1,37 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: NG;
+  src: url("/static/font/NanumGothic.eot");
+  src: local("â˜º"), url("/static/font/NanumGothic.woff") format("woff");
+  font-style: normal;
+}
+
+html,
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  color: #454545;
+  font-size: 14px;
+}
+
+li {
+  list-style-type: none;
+}
+
+input,
+label,
+textarea,
+select,
+option {
+  &:focus {
+    outline: none;
+  }
+  font-size: inherit;
+  font-weight: inherit;
 }

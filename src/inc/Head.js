@@ -1,111 +1,32 @@
 import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import "../App.css";
+import "../index.css";
 import styled from "styled-components";
 import Modal from "react-awesome-modal";
 import TistoryLoginBtn from "../components/user/TistoryLoginBtn";
 import "bootstrap/dist/css/bootstrap.css";
-class Head extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: false,
-      id: "",
-      password: ""
-    };
-  }
+import { CustomPlaceholder } from "react-placeholder-image";
 
-  _openModal = function() {
-    this.setState({
-      visible: true
-    });
-  };
-  _closeModal = function() {
-    this.setState({
-      visible: false
-    });
-  };
-
-  _ChangeID = function() {
-    const id_ = document.getElementsByName("id")[0].value;
-    this.setState({
-      id: id_
-    });
-  };
-
-  _ChangePW = function() {
-    const pw_ = document.getElementsByName("password")[0].value;
-    this.setState({
-      password: pw_
-    });
-  };
-  render() {
-    console.log(
-      "아이디 :" + this.state.id + "비밀번호 :" + this.state.password
-    );
-    return (
-      <Header>
-        <Link className="link_tit" to="/">
-          {" "}
-          <h3>Jieun's Blog!</h3>
+const Head = props => {
+  return (
+    <Header>
+      <Logo>
+        <Link href="/">
+          <a>
+            {/* <img src={images.logo} alt="logo image" /> */}
+            <CustomPlaceholder width={50} height={50} />
+          </a>
         </Link>
-        <div className="text-center">
-          {!this.props.isLogin ? (
-            <TistoryLoginBtn>관리자 로그인</TistoryLoginBtn>
-          ) : (
-            <h3>로그아웃</h3>
-          )}
-          <Modal
-            visible={this.state.visible}
-            width="400"
-            height="350"
-            effect="fadeInDown"
-            onClickAway={() => this._closeModal()}
-          >
-            <div>
-              <LoginTitle>관리자로그인</LoginTitle>
-              <form>
-                <div className="login_div">
-                  <div className="login_input_div">
-                    <p> 관리자 ID </p>
-                    <input
-                      type="text"
-                      name="id"
-                      onChange={() => this._ChangeID()}
-                    />
-                  </div>
-                  <div
-                    className="login_input_div"
-                    style={{ marginTop: "40px" }}
-                  >
-                    <p>관리자 password</p>
-                    <input
-                      type="password"
-                      name="password"
-                      onChange={() => this._ChangePW()}
-                    />
-                  </div>
-                  <div className="submit_div">
-                    <div>
-                      <input type="button" value="로그인" />
-                    </div>
-                    <div>
-                      <input
-                        type="button"
-                        value="취소"
-                        onClick={() => this._closeModal()}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </Modal>
-        </div>
-      </Header>
-    );
-  }
-}
+      </Logo>
+      {!props.isLogin ? (
+        <TistoryLoginBtn>관리자 로그인</TistoryLoginBtn>
+      ) : (
+        <h3>로그아웃</h3>
+      )}
+    </Header>
+  );
+};
 
 const Header = styled.div`
   display: grid;
@@ -113,9 +34,10 @@ const Header = styled.div`
   border-bottom: solid 1px #ababab;
 `;
 
-const LoginTitle = styled.div`
-  border-bottom: solid 1px #ababaa;
-  padding-bottom: 20px;
+export const Logo = styled.h1`
+  img {
+    height: 24px;
+  }
 `;
 
 export default Head;

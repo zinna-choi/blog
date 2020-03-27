@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import "../App.css";
 import Modal from "react-awesome-modal";
+import TistoryLoginBtn from "../components/user/TistoryLoginBtn";
 
 class Head extends Component {
   constructor(props) {
@@ -52,7 +53,11 @@ class Head extends Component {
           </Link>
         </div>
         <div className="acenter">
-          <h5 onClick={() => this._openModal()}> 관리자 로그인 </h5>
+          {!this.props.isLogin ? (
+            <TistoryLoginBtn>관리자 로그인</TistoryLoginBtn>
+          ) : (
+            <h3>로그아웃</h3>
+          )}
           <Modal
             visible={this.state.visible}
             width="400"

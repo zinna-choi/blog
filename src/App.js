@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import { Route, Link, Switch } from "react-router-dom";
-//import Home from './inc/home.js';//
-//import Test from './inc/test.js';//
-// import Head from "./inc/Head";
-import { Head } from "./inc";
-import UserList from "./components/user/UserList";
+import Home from "./inc/home.js";
+import Head from "./inc/Head";
+// import UserList from "./components/user/UserList";
 import { parseHash } from "./util";
 class App extends Component {
   constructor(props) {
@@ -36,7 +34,7 @@ class App extends Component {
     return (
       <div>
         <Head isLogin={!!this.state.access_token} />
-        <UserList />
+        <Home />
       </div>
     );
   }

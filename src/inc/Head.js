@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import "../App.css";
+import styled from "styled-components";
 import Modal from "react-awesome-modal";
 import TistoryLoginBtn from "../components/user/TistoryLoginBtn";
-
+import "bootstrap/dist/css/bootstrap.css";
 class Head extends Component {
   constructor(props) {
     super(props);
@@ -43,16 +44,12 @@ class Head extends Component {
       "아이디 :" + this.state.id + "비밀번호 :" + this.state.password
     );
     return (
-      <div className="header_grid">
-        <div></div>
-        <div className="acenter">
-          <Route path="/" />
-          <Link className="link_tit" to="/">
-            {" "}
-            <h3>Jieun's Blog!</h3>
-          </Link>
-        </div>
-        <div className="acenter">
+      <Header>
+        <Link className="link_tit" to="/">
+          {" "}
+          <h3>Jieun's Blog!</h3>
+        </Link>
+        <div className="text-center">
           {!this.props.isLogin ? (
             <TistoryLoginBtn>관리자 로그인</TistoryLoginBtn>
           ) : (
@@ -66,7 +63,7 @@ class Head extends Component {
             onClickAway={() => this._closeModal()}
           >
             <div>
-              <h4 className="acenter login_tit">관리자로그인</h4>
+              <LoginTitle>관리자로그인</LoginTitle>
               <form>
                 <div className="login_div">
                   <div className="login_input_div">
@@ -105,9 +102,20 @@ class Head extends Component {
             </div>
           </Modal>
         </div>
-      </div>
+      </Header>
     );
   }
 }
+
+const Header = styled.div`
+  display: grid;
+  grid-template-columns: 33% 33% auto;
+  border-bottom: solid 1px #ababab;
+`;
+
+const LoginTitle = styled.div`
+  border-bottom: solid 1px #ababaa;
+  padding-bottom: 20px;
+`;
 
 export default Head;

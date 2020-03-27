@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const TistoryLoginBtn = props => {
   const redirect_uri = "http://localhost:3000/oauth/callback";
@@ -15,3 +16,7 @@ const TistoryLoginBtn = props => {
 };
 
 export default TistoryLoginBtn;
+
+const TextCenterView = styled.div`
+  text-align: center;
+`;

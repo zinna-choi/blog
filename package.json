@@ -43,6 +43,7 @@
     "react-awesome-modal": "^2.0.5",
     "react-dom": "^16.13.0",
     "react-icon": "^1.0.0",
+    "react-icons": "^3.9.0",
     "react-placeholder-image": "^0.1.8",
     "react-router-dom": "^5.1.2",
     "resolve": "1.6.0",

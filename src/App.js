@@ -21,7 +21,7 @@ const App = props => {
   return (
     <React.Fragment>
       <Head isLogin={!!access_token} />
-      <Home />
+      {/* <Home /> */}
       <GlobalStyles />
     </React.Fragment>
   );

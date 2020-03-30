@@ -7,14 +7,14 @@ import { CustomPlaceholder } from "react-placeholder-image";
 import {} from "react-icons/fi";
 import { PostCard } from "../components/common/index";
 import { PostList, Side } from "../components/home/index";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 const Home = props => {
   return (
     <HomeLayoutStyled>
       <PopularStyled>
         <Block>
-          <Link>
+          <Link to="/Page">
             <PostCard />
           </Link>
           <Link>

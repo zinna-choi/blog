@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import { Route, Link, Switch } from "react-router-dom";
-import Home from "./inc/Home";
-import Head from "./inc/Head";
+import { Home, Head, Page } from "./inc";
 import { parseHash } from "./util";
 import GlobalStyles from "./GlobalStyles";
 
@@ -21,7 +20,10 @@ const App = props => {
   return (
     <React.Fragment>
       <Head isLogin={!!access_token} />
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/Page" component={Page} />
+      </Switch>
       <GlobalStyles />
     </React.Fragment>
   );

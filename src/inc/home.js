@@ -5,7 +5,7 @@ import "../index.css";
 import theme from "../static/theme";
 import { CustomPlaceholder } from "react-placeholder-image";
 import {} from "react-icons/fi";
-import { PostCardLg, PostCard } from "../components/common/index";
+import { PostCard } from "../components/common/index";
 import { PostList, Side } from "../components/home/index";
 import { Link } from "react-router-dom";
 
@@ -23,7 +23,7 @@ const Home = props => {
         </Block>
         <Block>
           <Link>
-            <PostCardLg />
+            <PostCard height={410} />
           </Link>
         </Block>
         <Block>

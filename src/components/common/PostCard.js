@@ -7,7 +7,7 @@ import { ellipsis } from "../../lib/styles/utils";
 
 const PostCard = props => {
   return (
-    <PostCardStyled className={`${props.className}`}>
+    <PostCardStyled className={`${props.className}`} height={props.height}>
       <CustomPlaceholder width={400} height={200} />
       <Cover />
       <Content>
@@ -23,7 +23,7 @@ const PostCard = props => {
 
 const PostCardStyled = styled.div`
   width: 390px;
-  height: 200px;
+  height: ${({ height }) => (height ? height : 200)}px;
   border-radius: 10px;
   background-color: ${theme.colors.gray1};
   margin: 10px 5px;

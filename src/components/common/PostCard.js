@@ -3,7 +3,7 @@ import styled from "styled-components";
 import theme from "../../static/theme";
 import { CustomPlaceholder } from "react-placeholder-image";
 import Bedge from "./Bedge";
-import { ellipsis } from "../../lib/styles/ellipsis";
+import { ellipsis } from "../../lib/styles/utils";
 
 const PostCard = props => {
   return (

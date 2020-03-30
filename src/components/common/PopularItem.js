@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { CustomPlaceholder } from "react-placeholder-image";
 import theme from "../../static/theme";
-import { ellipsis } from "../../lib/styles/ellipsis";
+import { ellipsis } from "../../lib/styles/utils";
 
 const PopularItem = props => {
   return (

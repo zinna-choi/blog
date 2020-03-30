@@ -7,21 +7,32 @@ import { CustomPlaceholder } from "react-placeholder-image";
 import {} from "react-icons/fi";
 import { PostCardLg, PostCard } from "../components/common/index";
 import { PostList, Side } from "../components/home/index";
+import { Link } from "react-router-dom";
 
 const Home = props => {
   return (
     <HomeLayoutStyled>
       <PopularStyled>
         <Block>
-          <PostCard />
-          <PostCard />
+          <Link>
+            <PostCard />
+          </Link>
+          <Link>
+            <PostCard />
+          </Link>
         </Block>
         <Block>
-          <PostCardLg />
+          <Link>
+            <PostCardLg />
+          </Link>
         </Block>
         <Block>
-          <PostCard />
-          <PostCard />
+          <Link>
+            <PostCard />
+          </Link>
+          <Link>
+            <PostCard />
+          </Link>
         </Block>
       </PopularStyled>
       <ContetStyled>

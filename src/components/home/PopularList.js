@@ -8,6 +8,8 @@ const PopularList = porps => {
       <PopularItem />
       <PopularItem />
       <PopularItem />
+      <PopularItem />
+      <PopularItem />
     </React.Fragment>
   );
 };

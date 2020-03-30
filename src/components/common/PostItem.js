@@ -5,7 +5,7 @@ import { CustomPlaceholder } from "react-placeholder-image";
 import Bedge from "./Bedge";
 import theme from "../../static/theme";
 import RectangleButton from "./RectangleButton";
-import { ellipsis } from "../../lib/styles/ellipsis";
+import { ellipsis } from "../../lib/styles/utils";
 
 const PostItem = props => {
   return (

@@ -5,6 +5,7 @@ import { CustomPlaceholder } from "react-placeholder-image";
 import Bedge from "./Bedge";
 import theme from "../../static/theme";
 import RectangleButton from "./RectangleButton";
+import { ellipsis } from "../../lib/styles/ellipsis";
 
 const PostItem = props => {
   return (
@@ -59,6 +60,7 @@ const PostTitle = styled.h3`
   font-weight: bold;
   color: #000;
   margin-top: 1rem;
+  ${ellipsis};
 `;
 
 const PostContent = styled.h5`
@@ -66,6 +68,9 @@ const PostContent = styled.h5`
   line-height: 2.5rem;
   margin-top: 1.5rem;
   font-weight: 400;
+  height: 6em;
+  ${ellipsis};
+  white-space: normal;
 `;
 
 const Block = styled.div`

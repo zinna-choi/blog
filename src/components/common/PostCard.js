@@ -3,6 +3,7 @@ import styled from "styled-components";
 import theme from "../../static/theme";
 import { CustomPlaceholder } from "react-placeholder-image";
 import Bedge from "./Bedge";
+import { ellipsis } from "../../lib/styles/ellipsis";
 
 const PostCard = props => {
   return (
@@ -63,6 +64,9 @@ const Content = styled.div`
 const Title = styled.h5`
   position: absolute;
   bottom: 40px;
+  ${ellipsis};
+  white-space: normal;
+  height: 2.5em;
 `;
 
 const Date = styled.p`

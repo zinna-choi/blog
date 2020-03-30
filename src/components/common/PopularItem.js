@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { CustomPlaceholder } from "react-placeholder-image";
 import theme from "../../static/theme";
+import { ellipsis } from "../../lib/styles/ellipsis";
 
 const PopularItem = props => {
   return (
@@ -47,6 +48,9 @@ const ContentStyled = styled.div`
 
 const Title = styled.h5`
   color: ${theme.colors.gray0};
+  ${ellipsis};
+  white-space: normal;
+  height: 3.6em;
 `;
 
 const Date = styled.p`

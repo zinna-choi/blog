@@ -1,53 +1,58 @@
 import React from "react";
+import styled from "styled-components";
+import "../App.css";
 import "../index.css";
-import styled, { css } from "styled-components";
+import theme from "../static/theme";
+import { CustomPlaceholder } from "react-placeholder-image";
+import {} from "react-icons/fi";
+import { PostCardLg, PostCard } from "../components/common/index";
+import { PostList, Side } from "../components/home/index";
 
-const Box = styled.div`
-  /* props 로 넣어준 값을 직접 전달해줄 수 있습니다. */
-  background: ${props => props.color || "blue"};
-  padding: 1rem;
+const Home = props => {
+  return (
+    <HomeLayoutStyled>
+      <PopularStyled>
+        <Block>
+          <PostCard />
+          <PostCard />
+        </Block>
+        <Block>
+          <PostCardLg />
+        </Block>
+        <Block>
+          <PostCard />
+          <PostCard />
+        </Block>
+      </PopularStyled>
+      <ContetStyled>
+        <PostList />
+        <Side />
+      </ContetStyled>
+    </HomeLayoutStyled>
+  );
+};
+
+const HomeLayoutStyled = styled.div`
+  width: 1200px;
+  margin: 0 auto;
+`;
+
+const Block = styled.div`
+  text-align: center;
+`;
+
+const PopularStyled = styled.div`
+  grid-template-columns: 33% 33% auto;
+  display: flex;
+  margin-top: 0px 10px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`;
+
+const ContetStyled = styled.div`
+  grid-template-columns: 66% auto;
+  overflow: hidden;
   display: flex;
 `;
 
-const Button = styled.button`
-  background: white;
-  color: black;
-  border-radius: 4px;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  font-size: 1rem;
-  font-weight: 600;
-
-  /* & 문자를 사용하여 Sass 처럼 자기 자신 선택 가능 */
-  &:hover {
-    background: rgba(255, 255, 255, 0.9);
-  }
-
-  /* 다음 코드는 inverted 값이 true 일 때 특정 스타일을 부여해줍니다. */
-  ${props =>
-    props.inverted &&
-    css`
-      background: none;
-      border: 2px solid white;
-      color: white;
-      &:hover {
-        background: white;
-        color: black;
-      }
-    `};
-  & + button {
-    margin-left: 1rem;
-  }
-`;
-
-const home = () => (
-  <Box color="black">
-    <Button>test</Button>
-    <Button inverted={true}>test</Button>
-  </Box>
-);
-
-export default home;
+export default Home;

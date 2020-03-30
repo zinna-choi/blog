@@ -2,19 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import theme from "../../static/theme";
 
-const RoundButton = props => {
-  return <RoundStyled className={`${props.className}`}>Category</RoundStyled>;
+const Bedge = props => {
+  return <BedgeStyled className={`${props.className}`}>Category</BedgeStyled>;
 };
 
-const RoundStyled = styled.button`
+const BedgeStyled = styled.button`
   width: 90px;
   height: 30px;
   border-radius: 23px;
   background-color: ${theme.colors.gray1};
   border: none;
   color: #fff;
-  padding: 9px 15px;
+  padding: 5px 10px;
   box-sizing: content-box;
 `;
 
-export default RoundButton;
+export default Bedge;

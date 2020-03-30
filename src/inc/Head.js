@@ -17,11 +17,9 @@ const Head = props => {
     <ContainStyled>
       <Header>
         <Logo>
-          <Link href="/">
-            <a>
-              {/* <img src={images.logo} alt="logo image" /> */}
-              <CustomPlaceholder width={60} height={60} />
-            </a>
+          <Link to="/">
+            {/* <img src={images.logo} alt="logo image" /> */}
+            <CustomPlaceholder width={60} height={60} />
           </Link>
         </Logo>
         <LeftStyled>
@@ -65,7 +63,7 @@ const Head = props => {
             style={{ marginRight: 10, marginLeft: 10 }}
             color={theme.colors.gray0}
           />
-          <SearchInput></SearchInput>
+          <SearchInput />
         </RightStyled>
       </Header>
     </ContainStyled>

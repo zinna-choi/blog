@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import { Route, Link, Switch } from "react-router-dom";
-import Home from "./inc/home.js";
+import Home from "./inc/Home";
 import Head from "./inc/Head";
 import { parseHash } from "./util";
 import GlobalStyles from "./GlobalStyles";
@@ -21,7 +21,7 @@ const App = props => {
   return (
     <React.Fragment>
       <Head isLogin={!!access_token} />
-      {/* <Home /> */}
+      <Home />
       <GlobalStyles />
     </React.Fragment>
   );

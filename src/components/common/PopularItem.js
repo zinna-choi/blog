@@ -40,7 +40,7 @@ const Thumbnail = styled.div`
 `;
 
 const ContentStyled = styled.div`
-  width: 68%;
+  width: 70%;
   float: right;
   text-align: left;
 `;

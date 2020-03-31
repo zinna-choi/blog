@@ -61,6 +61,7 @@ const PostTitle = styled.h3`
   color: #000;
   margin-top: 1rem;
   ${ellipsis};
+  line-height: 2.5em;
 `;
 
 const PostContent = styled.h5`

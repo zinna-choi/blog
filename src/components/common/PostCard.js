@@ -8,11 +8,15 @@ import { ellipsis } from "../../lib/styles/utils";
 const PostCard = props => {
   return (
     <PostCardStyled className={`${props.className}`} height={props.height}>
-      <CustomPlaceholder width={400} height={200} />
+      <CustomPlaceholder width={800} height={400} />
       <Cover />
       <Content>
-        <CateBedge />
-        <Title>
+        <CateBedge
+          className={`${props.cate}`}
+          right={props.right}
+          top={props.top}
+        />
+        <Title className={`${props.tit}`} font-size={props.fontSize}>
           6 Programming Habits That Make You an Ineffective Programmer
         </Title>
         <Date>MAR 25 .2020</Date>
@@ -77,8 +81,9 @@ const Date = styled.p`
 `;
 
 const CateBedge = styled(Bedge)`
+  right: ${({ right }) => (right ? right : 5)}%;
   position: absolute;
-  right: 10px;
+  top: ${({ top }) => (top ? top : 20)}px;
   background-color: ${theme.colors.red0};
 `;
 

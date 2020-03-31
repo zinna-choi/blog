@@ -17,20 +17,20 @@ const Home = props => {
           <Link to="/Page">
             <PostCard />
           </Link>
-          <Link>
+          <Link to="/Page">
             <PostCard />
           </Link>
         </Block>
         <Block>
-          <Link>
+          <Link to="/Page">
             <PostCard height={410} />
           </Link>
         </Block>
         <Block>
-          <Link>
+          <Link to="/Page">
             <PostCard />
           </Link>
-          <Link>
+          <Link to="/Page">
             <PostCard />
           </Link>
         </Block>

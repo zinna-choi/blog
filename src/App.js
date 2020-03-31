@@ -21,8 +21,8 @@ const App = props => {
     <React.Fragment>
       <Head isLogin={!!access_token} />
       <Switch>
+        <Route path="/page" component={Page} />
         <Route exact path="/" component={Home} />
-        <Route path="/Page" component={Page} />
       </Switch>
       <GlobalStyles />
     </React.Fragment>

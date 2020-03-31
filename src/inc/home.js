@@ -14,23 +14,23 @@ const Home = props => {
     <HomeLayoutStyled>
       <PopularStyled>
         <Block>
-          <Link to="/Page">
+          <Link to="/page">
             <PostCard />
           </Link>
-          <Link to="/Page">
+          <Link to="/page">
             <PostCard />
           </Link>
         </Block>
         <Block>
-          <Link to="/Page">
+          <Link to="/page">
             <PostCard height={410} />
           </Link>
         </Block>
         <Block>
-          <Link to="/Page">
+          <Link to="/page">
             <PostCard />
           </Link>
-          <Link to="/Page">
+          <Link to="/page">
             <PostCard />
           </Link>
         </Block>

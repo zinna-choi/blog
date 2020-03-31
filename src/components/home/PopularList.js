@@ -6,19 +6,19 @@ import { Link } from "react-router-dom";
 const PopularList = porps => {
   return (
     <React.Fragment>
-      <Link>
+      <Link to="/">
         <PopularItem />
       </Link>
-      <Link>
+      <Link to="/">
         <PopularItem />
       </Link>
-      <Link>
+      <Link to="/">
         <PopularItem />
       </Link>
-      <Link>
+      <Link to="/">
         <PopularItem />
       </Link>
-      <Link>
+      <Link to="/">
         <PopularItem />
       </Link>
     </React.Fragment>

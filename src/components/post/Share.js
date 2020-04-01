@@ -29,23 +29,13 @@ const Share = props => {
 const Contain = styled.div`
   padding: 5% 35%;
   border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
   margin-top: 2rem;
 `;
 const BlockStyled = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 2rem;
-`;
-
-const CircleButton = styled.button`
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  margin: 1rem;
-  padding-top: -10px;
-  line-height: 1rem;
 `;
 
 export default Share;

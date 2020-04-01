@@ -8,7 +8,7 @@ const PostCardWide = props => {
       right={81}
       top={260}
       padding={12}
-      fontSize={2}
+      fontSize={1.5}
       left={12}
     />
   );

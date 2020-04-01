@@ -15,10 +15,6 @@ const Page = porps => {
   return (
     <LayoutStyled>
       <Block>
-        {/* <MainImage> */}
-        {/* <CustomPlaceholder width={800} height={400} /> */}
-        {/* </MainImage> */}
-
         <PostCardWide />
       </Block>
       <BlockStyled>

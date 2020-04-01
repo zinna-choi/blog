@@ -4,6 +4,7 @@ import { CustomPlaceholder } from "react-placeholder-image";
 import { PostTag } from "./index";
 import TagItem from "../common/TagItem";
 import Share from "../post/Share";
+import PostComments from "./PostComments";
 
 const PostContent = props => {
   return (
@@ -56,6 +57,7 @@ const PostContent = props => {
         </Content>
         <PostTag />
         <Share />
+        <PostComments />
       </Contain>
     </React.Fragment>
   );

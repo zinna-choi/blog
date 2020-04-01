@@ -10,13 +10,17 @@ const PostCard = props => {
     <PostCardStyled className={`${props.className}`} height={props.height}>
       <CustomPlaceholder width={800} height={400} />
       <Cover />
-      <Content>
+      <Content className={`${props.con}`} padding={props.padding}>
         <CateBedge
           className={`${props.cate}`}
           right={props.right}
           top={props.top}
         />
-        <Title className={`${props.tit}`} font-size={props.fontSize}>
+        <Title
+          className={`${props.tit}`}
+          fontSize={props.fontSize}
+          left={props.left}
+        >
           6 Programming Habits That Make You an Ineffective Programmer
         </Title>
         <Date>MAR 25 .2020</Date>
@@ -62,7 +66,7 @@ const Content = styled.div`
   left: 0;
   color: #fff;
   text-align: left;
-  padding: 5%;
+  padding: ${({ padding }) => (padding ? padding : 5)}%;
 `;
 
 const Title = styled.h5`
@@ -70,7 +74,9 @@ const Title = styled.h5`
   bottom: 40px;
   ${ellipsis};
   white-space: normal;
-  height: 2.5em;
+  line-height: 1.25em;
+  left: ${({ left }) => (left ? left : 5)}%;
+  font-size: ${({ fontSize }) => (fontSize ? fontSize : 1.2)}em;
 `;
 
 const Date = styled.p`
@@ -78,6 +84,7 @@ const Date = styled.p`
   bottom: 5px;
   font-weight: 400;
   color: #bdbdbd;
+  font-size: 0.9em;
 `;
 
 const CateBedge = styled(Bedge)`

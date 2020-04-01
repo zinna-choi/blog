@@ -3,7 +3,15 @@ import styled from "styled-components";
 import PostCard from "./PostCard";
 
 const PostCardWide = props => {
-  return <PostCardWideStyled right={81} top={239} />;
+  return (
+    <PostCardWideStyled
+      right={81}
+      top={260}
+      padding={12}
+      fontSize={2}
+      left={12}
+    />
+  );
 };
 
 const PostCardWideStyled = styled(PostCard)`

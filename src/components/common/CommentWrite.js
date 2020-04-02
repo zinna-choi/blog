@@ -10,16 +10,14 @@ const CommentWrite = props => {
   return (
     <PostCommentsWriteBlock>
       <StyledTextarea placeholder="Write a your Comment" />
-      <div className="wirteinfo">
+      <div className="writeinfo">
         <div>
           <input className="c_user" type="text" placeholder="Name" />
           <input className="c_user" type="password" placeholder="Password" />
         </div>
         <div className="checkbox-contain">
-          {/* <input type="checkbox" id="secret" /> */}
-          {/* <label for="secret">secret</label> */}
           <FormControlLabel
-            control={<Checkbox name="checked" color="yellow" />}
+            control={<Checkbox name="checked" color="default" />}
             label="secret"
           />
           <button className="btn_post" type="submit">
@@ -36,7 +34,7 @@ const PostCommentsWriteBlock = styled.div`
     display: flex;
     justify-content: flex-end;
   }
-  .wirteinfo {
+  .writeinfo {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +44,7 @@ const PostCommentsWriteBlock = styled.div`
     padding: 8px;
     margin-right: 10px;
     border: 1px solid ${theme.colors.gray4};
+    border-radius: 3px;
   }
   .btn_post {
     border: none;

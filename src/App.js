@@ -5,6 +5,7 @@ import { Route, Link, Switch } from "react-router-dom";
 import { Home, Head, Page } from "./inc";
 import { parseHash } from "./util";
 import GlobalStyles from "./GlobalStyles";
+import styled from "styled-components";
 
 const App = props => {
   const [access_token, setAccess_token] = useState(null);
@@ -20,13 +21,18 @@ const App = props => {
   return (
     <React.Fragment>
       <Head isLogin={!!access_token} />
-      <Switch>
-        <Route path="/page" component={Page} />
-        <Route exact path="/" component={Home} />
-      </Switch>
+      <Block>
+        <Switch>
+          <Route path="/page" component={Page} />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </Block>
       <GlobalStyles />
     </React.Fragment>
   );
 };
 
+const Block = styled.div`
+  margin-top: 80px;
+`;
 export default App;

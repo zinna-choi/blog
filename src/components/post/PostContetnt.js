@@ -5,6 +5,7 @@ import { PostTag } from "./index";
 import TagItem from "../common/TagItem";
 import Share from "../post/Share";
 import PostComments from "./PostComments";
+import PostRelated from "./PostRelated";
 
 const PostContent = props => {
   return (
@@ -58,6 +59,12 @@ const PostContent = props => {
         <PostTag />
         <Share />
         <PostComments />
+        <Block>
+          <div>
+            <h3>Related Post</h3>
+          </div>
+        </Block>
+        <PostRelated />
       </Contain>
     </React.Fragment>
   );
@@ -84,5 +91,10 @@ const Content = styled.div`
     margin: 1rem auto 0px;
     max-width: 100%;
   }
+`;
+
+const Block = styled.div`
+  text-align: center;
+  margin: 3rem 2rem 1rem 2rem;
 `;
 export default PostContent;

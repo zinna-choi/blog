@@ -56,8 +56,8 @@ const PopularStyled = styled.div`
   grid-template-columns: 33% 33% auto;
   display: flex;
   margin-top: 0px 10px;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  /* margin-top: 2rem; */
+  /* margin-bottom: 2rem; */
 `;
 
 const ContetStyled = styled.div`

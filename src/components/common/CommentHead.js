@@ -6,6 +6,10 @@ import { FiCornerDownRight } from "react-icons/fi";
 import theme from "../../static/theme";
 
 const CommentHead = props => {
+  const onToggle = e => {
+    e.preventDefault();
+    console.log("1111");
+  };
   return (
     <CommentCon>
       <div className="profile">
@@ -26,7 +30,7 @@ const CommentHead = props => {
         sunt quis deserunt nostrud cillum id. Irure non officia cupidatat
         laborum sint ut
       </Contents>
-      <Reply>
+      <Reply onClick={onToggle}>
         <FiCornerDownRight size={15} color={theme.colors.red0} />
         Reply
       </Reply>

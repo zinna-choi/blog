@@ -70,7 +70,15 @@ const Head = props => {
   );
 };
 const ContainStyled = styled.div`
-  border-bottom: solid 1px #757575;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 100;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.2);
 `;
 
 const Header = styled.div`
@@ -78,7 +86,6 @@ const Header = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: 10% 45% auto;
-
   text-align: center;
   padding: 10px;
   align-items: baseline;

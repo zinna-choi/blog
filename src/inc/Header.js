@@ -12,7 +12,7 @@ import { FiMail, FiGithub, FiBookmark, FiSearch } from "react-icons/fi";
 import RoundButton from "../components/common/RoundButton";
 import SearchInput from "../components/common/SearchInput";
 
-const Head = props => {
+const Head = (props) => {
   return (
     <ContainStyled>
       <Header>

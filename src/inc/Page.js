@@ -10,8 +10,9 @@ import { PostList, Side } from "../components/home";
 import { PostCard } from "../components/common";
 import PostCardWide from "../components/common/PostcardWide";
 import PostContent from "../components/post/PostContetnt";
+import media from "../lib/styles/media";
 
-const Page = porps => {
+const Page = (porps) => {
   return (
     <LayoutStyled>
       <Block>
@@ -35,11 +36,16 @@ const ContetStyled = styled.div`
   grid-template-columns: 66% auto;
   overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
 `;
 const Block = styled.div``;
 const BlockStyled = styled.div`
   width: 1200px;
   margin: 0 auto;
+  ${media.medium} {
+    width: 100%;
+    margin: 0 2%;
+  }
 `;
 
 const MainImage = styled.div`

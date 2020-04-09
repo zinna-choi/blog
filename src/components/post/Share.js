@@ -5,16 +5,17 @@ import {
   FacebookIcon,
   KakaoIcon,
   TwitterIcon,
-  PinterestIcon
+  PinterestIcon,
 } from "react-share-kakao";
+import media from "../../lib/styles/media";
 
-const Share = props => {
+const Share = (props) => {
   return (
     <React.Fragment>
       <Contain>
-        <h3 style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <h4 style={{ textAlign: "center", marginBottom: "2rem" }}>
           Share this Post !
-        </h3>
+        </h4>
         <BlockStyled>
           <FacebookIcon size={40} round={true} />
           <KakaoIcon size={40} round={true} />
@@ -36,6 +37,8 @@ const BlockStyled = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 2rem;
+  ${media.medium} {
+  }
 `;
 
 export default Share;

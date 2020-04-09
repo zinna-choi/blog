@@ -4,27 +4,34 @@ import theme from "../../static/theme";
 import { CustomPlaceholder } from "react-placeholder-image";
 import Bedge from "./Bedge";
 import { ellipsis } from "../../lib/styles/utils";
+import media from "../../lib/styles/media";
 
-const PostCard = props => {
+const PostCard = (props) => {
   return (
     <PostCardStyled className={`${props.className}`} height={props.height}>
-      <CustomPlaceholder width={800} height={400} />
-      <Cover />
-      <Content className={`${props.con}`} padding={props.padding}>
-        <CateBedge
-          className={`${props.cate}`}
-          right={props.right}
-          top={props.top}
-        />
-        <Title
-          className={`${props.tit}`}
-          fontSize={props.fontSize}
-          left={props.left}
-        >
-          6 Programming Habits That Make You an Ineffective Programmer
-        </Title>
-        <Date>MAR 25 .2020</Date>
-      </Content>
+      <div className="thumb">
+        <CustomPlaceholder width={800} height={400} />
+        <Cover />
+      </div>
+      <div className="con">
+        <Content className={`${props.con}`} padding={props.padding}>
+          <div className="cate">
+            <CateBedge
+              className={`${props.cate}`}
+              right={props.right}
+              top={props.top}
+            />
+          </div>
+          <Title
+            className={`${props.tit}`}
+            fontSize={props.fontSize}
+            left={props.left}
+          >
+            6 Programming Habits That Make You an Ineffective Programmer
+          </Title>
+          <Date>MAR 25 .2020</Date>
+        </Content>
+      </div>
     </PostCardStyled>
   );
 };
@@ -40,6 +47,30 @@ const PostCardStyled = styled.div`
   img {
     width: 100%;
     height: 100%;
+  }
+  .thumb {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .con {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: relative;
+    z-index: 10;
+  }
+  ${media.medium} {
+    width: 100%;
+    height: 200px;
+  }
+  ${media.small} {
+    width: 100%;
   }
 `;
 const Cover = styled.div`
@@ -67,6 +98,7 @@ const Content = styled.div`
   color: #fff;
   text-align: left;
   padding: ${({ padding }) => (padding ? padding : 5)}%;
+  z-index: 100;
 `;
 
 const Title = styled.h5`
@@ -87,7 +119,7 @@ const Date = styled.p`
   font-size: 0.9em;
 `;
 
-const CateBedge = styled(Bedge)`
+export const CateBedge = styled(Bedge)`
   right: ${({ right }) => (right ? right : 5)}%;
   position: absolute;
   top: ${({ top }) => (top ? top : 20)}px;

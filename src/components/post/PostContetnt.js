@@ -6,8 +6,9 @@ import TagItem from "../common/TagItem";
 import Share from "../post/Share";
 import PostComments from "./PostComments";
 import PostRelated from "./PostRelated";
+import media from "../../lib/styles/media";
 
-const PostContent = props => {
+const PostContent = (props) => {
   return (
     <React.Fragment>
       <Contain>
@@ -72,6 +73,9 @@ const PostContent = props => {
 
 const Contain = styled.div`
   width: 66%;
+  ${media.medium} {
+    width: 100%;
+  }
 `;
 
 const Content = styled.div`
@@ -82,6 +86,7 @@ const Content = styled.div`
   }
   p {
     line-height: 2rem;
+    padding: 1rem;
   }
   img {
     width: auto;

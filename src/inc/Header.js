@@ -11,61 +11,70 @@ import { CustomPlaceholder } from "react-placeholder-image";
 import { FiMail, FiGithub, FiBookmark, FiSearch } from "react-icons/fi";
 import RoundButton from "../components/common/RoundButton";
 import SearchInput from "../components/common/SearchInput";
+import media from "../lib/styles/media";
+import Container from "@material-ui/core/Container";
+import SearchBar from "../components/common/SearchBar";
 
 const Head = (props) => {
   return (
     <ContainStyled>
-      <Header>
-        <Logo>
-          <Link to="/">
-            {/* <img src={images.logo} alt="logo image" /> */}
-            <CustomPlaceholder width={60} height={60} />
-          </Link>
-        </Logo>
-        <LeftStyled>
-          <Block>
-            <NavLink
-              to="/"
-              activeClassName="active"
-              isActive={(match, location) => {
-                return ["/"].indexOf(location.pathname) !== -1;
-              }}
-            >
-              HOME
-            </NavLink>
-            <NavLink to="/category1" activeClassName="active">
-              CATEGORY1
-            </NavLink>
-            <NavLink to="/category2" activeClassName="active">
-              CATEGORY2
-            </NavLink>
-            <NavLink to="/category3" activeClassName="active">
-              CATEGORY3
-            </NavLink>
-            <NavLink to="/Contact" activeClassName="active">
-              CONTACT
-            </NavLink>
-          </Block>
-        </LeftStyled>
-        <RightStyled>
-          <FiMail
-            size={20}
-            style={{ marginRight: 10, marginLeft: 10 }}
-            color={theme.colors.gray0}
-          />
-          <FiGithub
-            size={20}
-            style={{ marginRight: 10, marginLeft: 10 }}
-            color={theme.colors.gray0}
-          />
-          <FiBookmark
-            size={20}
-            style={{ marginRight: 10, marginLeft: 10 }}
-            color={theme.colors.gray0}
-          />
-          <SearchInput />
-        </RightStyled>
-      </Header>
+      <Container>
+        <Header>
+          <Logo>
+            <Link to="/">
+              {/* <img src={images.logo} alt="logo image" /> */}
+              <CustomPlaceholder width={60} height={60} />
+            </Link>
+          </Logo>
+          <LeftStyled>
+            <Block>
+              <NavLink
+                to="/"
+                activeClassName="active"
+                isActive={(match, location) => {
+                  return ["/"].indexOf(location.pathname) !== -1;
+                }}
+              >
+                HOME
+              </NavLink>
+              <NavLink to="/category1" activeClassName="active">
+                CATEGORY1
+              </NavLink>
+              <NavLink to="/category2" activeClassName="active">
+                CATEGORY2
+              </NavLink>
+              <NavLink to="/category3" activeClassName="active">
+                CATEGORY3
+              </NavLink>
+              <NavLink to="/Contact" activeClassName="active">
+                CONTACT
+              </NavLink>
+            </Block>
+          </LeftStyled>
+          <RightStyled>
+            {/* <SearchInput /> */}
+            <SearchBar />
+            <div class="con">
+              <FiMail
+                size={20}
+                style={{ marginRight: 10, marginLeft: 10 }}
+                color={theme.colors.gray0}
+              />
+              <FiGithub
+                size={20}
+                style={{ marginRight: 10, marginLeft: 10 }}
+                color={theme.colors.gray0}
+              />
+              <FiBookmark
+                size={20}
+                style={{ marginRight: 10, marginLeft: 10 }}
+                color={theme.colors.gray0}
+              />
+              <Login title={"LOGIN"} />
+            </div>
+          </RightStyled>
+        </Header>
+      </Container>
     </ContainStyled>
   );
 };
@@ -79,6 +88,10 @@ const ContainStyled = styled.div`
   top: 0;
   left: 0;
   box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.2);
+
+  ${media.medium} {
+    display: none;
+  }
 `;
 
 const Header = styled.div`
@@ -87,8 +100,11 @@ const Header = styled.div`
   display: grid;
   grid-template-columns: 10% 45% auto;
   text-align: center;
-  padding: 10px;
-  align-items: baseline;
+  padding: 1%;
+  align-items: center;
+  ${media.samll} {
+    max-width: 100%;
+  }
 `;
 
 const LeftStyled = styled.div`
@@ -118,6 +134,17 @@ const Block = styled.div`
 
 const RightStyled = styled.div`
   text-align: right;
+  .con {
+    margin-top: 2%;
+  }
+`;
+
+const Login = styled(RoundButton)`
+  background-color: #fff;
+  color: ${theme.colors.red0};
+  border: 1px solid ${theme.colors.red0};
+  border-radius: 4px;
+  box-shadow: 10px 10px 2px 1px rgba(234, 84, 85, 0.7);
 `;
 export const Logo = styled.div``;
 

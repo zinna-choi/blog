@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { CustomPlaceholder } from "react-placeholder-image";
 
-const Avatar = props => {
+const Avatar = (props) => {
   return (
     <AvatarStyled
       className={`${props.avatar}`}
@@ -15,8 +15,8 @@ const Avatar = props => {
 };
 
 const AvatarStyled = styled.div`
-  width: ${({ width }) => (width ? width : 157)}px;
-  height: ${({ height }) => (height ? height : 157)}px;
+  width: ${({ width }) => (width ? width : 9.725)}rem;
+  height: ${({ height }) => (height ? height : 9.725)}rem;
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;

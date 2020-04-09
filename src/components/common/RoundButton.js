@@ -2,13 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import theme from "../../static/theme";
 
-const RoundButton = props => {
-  return <RoundStyled className={`${props.className}`}>Category</RoundStyled>;
+const RoundButton = (props) => {
+  return (
+    <RoundStyled className={`${props.className}`}>{props.title}</RoundStyled>
+  );
 };
 
 const RoundStyled = styled.button`
   width: 90px;
-  height: 30px;
+  height: 22px;
   border-radius: 23px;
   background-color: ${theme.colors.gray1};
   border: none;

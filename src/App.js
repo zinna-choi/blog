@@ -6,6 +6,8 @@ import { Home, Header, Page } from "./inc";
 import { parseHash } from "./util";
 import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
+import MobileHeaderContain from "./inc/MobileHeaderContain";
+import media from "./lib/styles/media";
 
 const App = (props) => {
   const [access_token, setAccess_token] = useState(null);
@@ -21,6 +23,7 @@ const App = (props) => {
   return (
     <React.Fragment>
       <Header isLogin={!!access_token} />
+      <MobileHeaderContain />
       <Block>
         <Switch>
           <Route path="/page" component={Page} />
@@ -33,6 +36,13 @@ const App = (props) => {
 };
 
 const Block = styled.div`
-  margin-top: 80px;
+  margin-top: 7rem;
+  ${media.mediun} {
+    margin-top: 6rem;
+  }
+  ${media.small} {
+    margin-top: 5rem;
+  }
 `;
+
 export default App;

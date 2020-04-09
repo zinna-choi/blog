@@ -6,8 +6,9 @@ import Bedge from "./Bedge";
 import theme from "../../static/theme";
 import RectangleButton from "./RectangleButton";
 import { ellipsis } from "../../lib/styles/utils";
+import media from "../../lib/styles/media";
 
-const PostItem = props => {
+const PostItem = (props) => {
   return (
     <Link to="/" style={{ textDecoration: "none" }}>
       <PostItemStyled>
@@ -15,25 +16,27 @@ const PostItem = props => {
           <CustomPlaceholder width={800} height={400} />
           {/* <img src={images.logo} alt="logo image" /> */}
         </Thumbnail>
-        <BlockStyled>
-          <div className="title">
-            <CateButton />
-            <Date>MAR 25 . 2020</Date>
-          </div>
-        </BlockStyled>
-        <PostTitle>
-          6 Programming Habits That Make You an Ineffective Programmer
-        </PostTitle>
-        <PostContent>
-          We all have both good and bad habits. Programming habits are no
-          exception to this. But once you start being aware of your bad habits
-          you could change yourself for the better. If you work on breaking one
-          of these bad habits in this list you will not only impact yourself.
-          Most likely it ...
-        </PostContent>
-        <Block>
-          <RectangleButton />
-        </Block>
+        <PostDetail>
+          <BlockStyled>
+            <div className="title">
+              <CateButton />
+              <Date>MAR 25 . 2020</Date>
+            </div>
+          </BlockStyled>
+          <PostTitle>
+            6 Programming Habits That Make You an Ineffective Programmer
+          </PostTitle>
+          <PostContent>
+            We all have both good and bad habits. Programming habits are no
+            exception to this. But once you start being aware of your bad habits
+            you could change yourself for the better. If you work on breaking
+            one of these bad habits in this list you will not only impact
+            yourself. Most likely it ...
+          </PostContent>
+          <Block>
+            <RectangleButton />
+          </Block>
+        </PostDetail>
       </PostItemStyled>
     </Link>
   );
@@ -48,6 +51,8 @@ const Thumbnail = styled.div`
   overflow: hidden;
   img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 `;
 const CateButton = styled(Bedge)`
@@ -92,5 +97,11 @@ const Date = styled.h4`
   font-size: 1em;
   margin-right: 10px;
   font-weight: 400;
+`;
+
+const PostDetail = styled.div`
+  ${media.medium} {
+    margin: 0 4%;
+  }
 `;
 export default PostItem;

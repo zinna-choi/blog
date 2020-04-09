@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import theme from "../../static/theme";
 import CommentHead from "../common/CommentHead";
 import CommentWrite from "../common/CommentWrite";
+import media from "../../lib/styles/media";
 
-const PostComments = props => {
+const PostComments = (props) => {
   return (
     <CommentLayout>
       <CommentCounting>
@@ -51,6 +52,9 @@ const MarginTop = styled.div`
 `;
 const ReplyArea = styled.ul`
   padding-left: 3%;
+  ${media.small} {
+    padding-left: 5%;
+  }
 `;
 
 export default PostComments;

@@ -4,8 +4,9 @@ import Postcard from "../common/PostCard";
 import theme from "../../static/theme";
 import { Link } from "react-router-dom";
 import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";
+import media from "../../lib/styles/media";
 
-const PostRelated = props => {
+const PostRelated = (props) => {
   return (
     <BlockStyled>
       <Link>
@@ -39,9 +40,20 @@ const BlockStyled = styled.div`
   width: 100%;
   border-top: 1px solid #e2e2e2;
   padding: 1rem 0;
+  a {
+    ${media.medium} {
+      width: 50%;
+    }
+  }
+  ${media.small} {
+    display: block;
+  }
 `;
 const RelatedPost = styled.div`
   position: relative;
+  ${media.medium}{
+   width:100%
+ }
   .hover {
     width: 390px;
     height: 200px;
@@ -53,6 +65,12 @@ const RelatedPost = styled.div`
     text-align: center;
     padding: 22%;
     opacity: 0;
+    z-index:999;
+    ${media.medium}{
+      position:inherit;
+      display:none;
+      
+    }
     &:hover {
       opacity: 1;
       background-color: rgba(255, 180, 0, 0.9);
@@ -73,6 +91,10 @@ const RelatedPost = styled.div`
     margin:10%:
   }
 `;
-const Post = styled(Postcard)``;
+const Post = styled(Postcard)`
+  ${media.small} {
+    width: 96%;
+  }
+`;
 
 export default PostRelated;

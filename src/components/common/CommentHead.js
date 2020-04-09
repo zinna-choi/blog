@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import Avatar from "../common/Avatar";
 import { FiCornerDownRight } from "react-icons/fi";
 import theme from "../../static/theme";
+import media from "../../lib/styles/media";
 
-const CommentHead = props => {
-  const onToggle = e => {
+const CommentHead = (props) => {
+  const onToggle = (e) => {
     e.preventDefault();
     console.log("1111");
   };
@@ -14,7 +15,7 @@ const CommentHead = props => {
     <CommentCon>
       <div className="profile">
         <Link to="/">
-          <Avatar width={70} height={70} />
+          <Avatar width={4.725} height={4.725} />
         </Link>
         <div className="comment-info">
           <div className="username">
@@ -43,16 +44,25 @@ const Contents = styled.div`
   font-size: 0.8rem;
   line-height: 1.5rem;
   color: ${theme.colors.gray0};
+  ${media.small} {
+    width: 100%;
+  }
 `;
 const CommentCon = styled.div`
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${media.small} {
+    display: block;
+  }
   .profile {
     display: flex;
     align-items: center;
     width: 22%;
+    ${media.small} {
+      width: 100%;
+    }
     img {
       width: 100%;
       height: auto;

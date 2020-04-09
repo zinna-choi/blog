@@ -8,8 +8,9 @@ import {} from "react-icons/fi";
 import { PostCard } from "../components/common/index";
 import { PostList, Side } from "../components/home/index";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import media from "../lib/styles/media";
 
-const Home = props => {
+const Home = (props) => {
   return (
     <HomeLayoutStyled>
       <PopularStyled>
@@ -44,24 +45,35 @@ const Home = props => {
 };
 
 const HomeLayoutStyled = styled.div`
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 `;
 
 const Block = styled.div`
   text-align: center;
+  ${media.medium} {
+    width: 100%;
+    margin: 0 2%;
+  }
 `;
 
 const PopularStyled = styled.div`
-  grid-template-columns: 33% 33% auto;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 0px 10px;
+  ${media.xsmall} {
+    max-width: 100%;
+  }
 `;
 
 const ContetStyled = styled.div`
   grid-template-columns: 66% auto;
   overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  ${media.medium} {
+  }
 `;
 
 export default Home;

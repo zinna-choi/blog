@@ -5,8 +5,9 @@ import TextareaAutosize from "react-textarea-autosize";
 import theme from "../../static/theme";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
+import media from "../../lib/styles/media";
 
-const CommentWrite = props => {
+const CommentWrite = (props) => {
   return (
     <PostCommentsWriteBlock>
       <StyledTextarea placeholder="Write a your Comment" />
@@ -39,12 +40,18 @@ const PostCommentsWriteBlock = styled.div`
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
+    ${media.small} {
+      display: block;
+    }
   }
   .c_user {
     padding: 8px;
     margin-right: 10px;
     border: 1px solid ${theme.colors.gray4};
     border-radius: 3px;
+    ${media.small} {
+      width: 100%;
+    }
   }
   .btn_post {
     border: none;
@@ -63,6 +70,11 @@ const PostCommentsWriteBlock = styled.div`
     margin-right: 1rem;
     label {
       color: #ccc;
+    }
+  }
+  .checkbox-contain {
+    ${media.small} {
+      text-align: right;
     }
   }
 `;

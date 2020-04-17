@@ -38,6 +38,10 @@ const CommentLayout = styled.div`
   p {
     font-weight: bold;
   }
+
+  ${media.samall} {
+    padding: 2rem 0.7rem;
+  }
 `;
 const CommentCounting = styled.div`
   span {

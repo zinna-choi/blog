@@ -21,12 +21,14 @@ const MobileHeaderContain = (props) => {
     <ContainStyled>
       <Container>
         <Header>
-          <Logo>
-            <Link to="/">
-              {/* <img src={images.logo} alt="logo image" /> */}
-              <CustomPlaceholder width={60} height={60} />
-            </Link>
-          </Logo>
+          <LeftStyled>
+            <Logo>
+              <Link to="/">
+                {/* <img src={images.logo} alt="logo image" /> */}
+                <CustomPlaceholder width={60} height={60} />
+              </Link>
+            </Logo>
+          </LeftStyled>
           <RightStyled>
             <SearchIcon fontSize="large" />
             <MobileHeader />
@@ -55,15 +57,15 @@ const ContainStyled = styled.div`
 const Header = styled.div`
   width: 100%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 88% auto;
-  padding: 1%;
+  display: inline-flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 1% 0%;
   ${media.samll} {
     max-width: 100%;
   }
 `;
-
+const LeftStyled = styled.div``;
 const RightStyled = styled.div`
   text-align: right;
   display: flex;

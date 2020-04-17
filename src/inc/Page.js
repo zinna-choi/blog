@@ -44,7 +44,6 @@ const BlockStyled = styled.div`
   margin: 0 auto;
   ${media.medium} {
     width: 100%;
-    margin: 0 2%;
   }
 `;
 
